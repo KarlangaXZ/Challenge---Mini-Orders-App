@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Z/zuGx/8qq4=",
+  "dgSpecHash": "y96Jc34SCCY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\MiniOrdersApi\\MiniOrdersApi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Personal\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\Personal\\.nuget\\packages\\microsoft.openapi\\1.6.25\\microsoft.openapi.1.6.25.nupkg.sha512",
+    "C:\\Users\\Personal\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.5\\swashbuckle.aspnetcore.9.0.5.nupkg.sha512",
+    "C:\\Users\\Personal\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.5\\swashbuckle.aspnetcore.swagger.9.0.5.nupkg.sha512",
+    "C:\\Users\\Personal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.5\\swashbuckle.aspnetcore.swaggergen.9.0.5.nupkg.sha512",
+    "C:\\Users\\Personal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.5\\swashbuckle.aspnetcore.swaggerui.9.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
