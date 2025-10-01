@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y96Jc34SCCY=",
+  "dgSpecHash": "q3k/IimDDLw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\MiniOrdersApi\\MiniOrdersApi.csproj",
+  "projectFilePath": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\backend\\MiniOrdersApi\\MiniOrdersApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Personal\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
     "C:\\Users\\Personal\\.nuget\\packages\\microsoft.openapi\\1.6.25\\microsoft.openapi.1.6.25.nupkg.sha512",

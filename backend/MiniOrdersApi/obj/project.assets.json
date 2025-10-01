@@ -448,11 +448,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\MiniOrdersApi\\MiniOrdersApi.csproj",
+      "projectUniqueName": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\backend\\MiniOrdersApi\\MiniOrdersApi.csproj",
       "projectName": "MiniOrdersApi",
-      "projectPath": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\MiniOrdersApi\\MiniOrdersApi.csproj",
+      "projectPath": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\backend\\MiniOrdersApi\\MiniOrdersApi.csproj",
       "packagesPath": "C:\\Users\\Personal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\MiniOrdersApi\\obj\\",
+      "outputPath": "C:\\Users\\Personal\\Desktop\\Challenge - Mini Orders App\\backend\\MiniOrdersApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
