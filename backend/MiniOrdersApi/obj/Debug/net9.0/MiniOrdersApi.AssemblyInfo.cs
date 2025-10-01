@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniOrdersApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c91df1a33d03280f871ef8f0413bf0c3589c9de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df5a903fdc0d1f374bf596a25662b99631222147")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniOrdersApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniOrdersApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
