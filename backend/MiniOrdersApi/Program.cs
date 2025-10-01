@@ -1,6 +1,25 @@
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<OrdersApi.Repositories.IOrderRepository, OrdersApi.Repositories.OrderRepository>();
+
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+
+if (app.Environment.IsDevelopment())
+{
+app.UseSwagger();
+app.UseSwaggerUI();
+}
+
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+
 
 app.Run();

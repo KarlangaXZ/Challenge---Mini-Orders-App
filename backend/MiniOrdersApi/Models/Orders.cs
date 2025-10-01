@@ -6,7 +6,7 @@ namespace OrdersApi.Models
 {
     public class Order
     {
-        public Guid guid { get; set; }
+        public Guid Id { get; set; }
         [Required]
         [StringLength(200)]
         public string Cliente { get; set; } = string.Empty;
@@ -15,5 +15,6 @@ namespace OrdersApi.Models
         public DateTime Fecha { get; set; }
         [Range(0.01, double.MaxValue, ErrorMessage = "El total debe ser mayor a 0")]
         public decimal Total { get; set;}
+        
     }
 }
