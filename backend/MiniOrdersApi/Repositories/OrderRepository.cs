@@ -14,7 +14,7 @@ namespace OrdersApi.Repositories
 
         public OrderRepository()
         {
-            
+            _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "Orinteck", Fecha = DateTime.UtcNow.AddDays(-3), Total = 300.00m });
             _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "ACME S.A.", Fecha = DateTime.UtcNow.AddDays(-2), Total = 150.50m });
             _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "Globex Corp", Fecha = DateTime.UtcNow.AddDays(-1), Total = 299.99m });
         }

@@ -1,7 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MiniOrdersApi.Dtos
+
+namespace OrdersApi.Dtos
 {
     public class OrderCreateDto
     {
@@ -9,10 +10,12 @@ namespace MiniOrdersApi.Dtos
         [StringLength(200)]
         public string Cliente { get; set; } = string.Empty;
 
-        [Required]
+
+
         public DateTime? Fecha { get; set; }
 
-        [Range(0.01, double.MaxValue, ErrorMessage = "El total debe ser mayor a 0")]
+
+        [Range(0.01, double.MaxValue, ErrorMessage = "El total debe ser mayor que 0.")]
         public decimal Total { get; set; }
     }
 }
