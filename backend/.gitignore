@@ -1,0 +1,41 @@
+# Compilación
+bin/
+obj/
+out/
+
+# Paquetes
+*.nupkg
+*.snupkg
+*.nuspec
+*.dll
+*.exe
+*.pdb
+
+# Archivos de usuario (config locales de VS/VSCode)
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+
+# Archivos generados
+launchSettings.json
+
+# Test coverage
+*.coverage
+*.coveragexml
+TestResult.xml
+TestResults/
+
+# Archivos de Rider/JetBrains
+.idea/
+*.iml
+
+# MacOS / Linux
+.DS_Store
+Thumbs.db
