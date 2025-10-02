@@ -1,19 +1,15 @@
 
 :root {
-  --bs-primary: #9333ea;     
-  --bs-secondary: #10b981;   
-  --bs-success: #0ea5e9;     
-  --bs-info: #f59e0b;        
-  --bs-warning: #f97316;     
-  --bs-danger: #ef4444;      
+  --bs-primary: #9333ea;       
   --bs-light: #f5f3ff;       
-  --bs-dark: #1f2937;        
+  --bs-dark: #213b5f;        
 }
 
 
 body {
   background-color: var(--bs-dark);
     color: #f3f4f6; 
+    font-weight: 500;
 }
 
 .table thead {
@@ -22,6 +18,7 @@ body {
 }
 .table tbody tr:nth-child(even) {
   background-color: var(--bs-light);
+
 }
 .table tbody tr:nth-child(odd) {
   background-color: #fff;
