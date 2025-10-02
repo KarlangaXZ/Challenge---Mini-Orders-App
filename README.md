@@ -56,3 +56,62 @@ Estos son algunos de los endpoints principales:
 
 - `DELETE /api/orders/{id}` → Eliminar orden
 
+### Como correr el Frontend:
+
+Esta es la interface de usuario, construida con Vue3, Typescript y Bootstrap 5.
+
+Consume la API REST del `backend` para ver las lista, buscar y crear, eliminar y modificar como se solicita.
+
+Los siguientes pasos desde la carpeta de `frontend` para arrancar.
+
+1. instalar las dependencias.
+```
+npm install
+```
+
+2. Arrancar el servidor de desarrollo
+```
+npm run dev
+```
+
+Vite iniciara la aplicacion en el `http://localhost:5173`, desde aqui podrar ver la pagina.
+
+3. Configurar la URL de la API
+
+El cliente Axios de esta SPA utiliza un proxy de Vite para redirigir peticiones a `/api` hacia el backend.
+Asegúrate de que el archivo `vite.config.ts` tenga la configuracion como esta, en mi caso fue esta:
+
+```ts
+server: {
+  proxy: {
+    '/api': {
+      target: 'http://localhost:5193', <-- puerto donde corre el backend
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/api/, '')
+    }
+  }
+}
+```
+----
+
+🧪 Ejemplo de uso
+
+Arranca el backend en la carpeta backend/:
+
+```
+cd backend/MiniOrdersApi
+dotnet run
+```
+
+Arranca la SPA desde la carpeta frontend/:
+
+```
+npm install
+npm run dev
+```
+
+Visita `http://localhost:5173` en tu navegador. Verás el listado de órdenes.
+
+Usa el cuadro de búsqueda para filtrar por cliente, navega por las páginas y haz clic en Nueva Orden para crear una nueva.
+
+

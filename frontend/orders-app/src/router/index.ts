@@ -7,7 +7,8 @@ const routes: RouteRecordRaw[] = [
   { path: '/', redirect: '/orders' },
   { path: '/orders', component: OrdersList },
   { path: '/orders/new', component: OrderForm },
-  { path: '/orders/:id', component: OrderDetails }
+  { path: '/orders/:id', component: OrderDetails },
+  
 ]
 
 export default createRouter({
