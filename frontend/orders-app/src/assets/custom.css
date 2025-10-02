@@ -1,0 +1,29 @@
+
+:root {
+  --bs-primary: #9333ea;     
+  --bs-secondary: #10b981;   
+  --bs-success: #0ea5e9;     
+  --bs-info: #f59e0b;        
+  --bs-warning: #f97316;     
+  --bs-danger: #ef4444;      
+  --bs-light: #f5f3ff;       
+  --bs-dark: #1f2937;        
+}
+
+
+body {
+  background-color: var(--bs-dark);
+    color: #f3f4f6; 
+}
+
+
+.table thead {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+.table tbody tr:nth-child(even) {
+  background-color: var(--bs-light);
+}
+.table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}

@@ -30,7 +30,7 @@ watch([search, page], fetchOrders)
 </script>
 
 <template>
-  <div class="container py-4">
+  <div class="container py-4 ">
     <h1 class="h3 mb-4">Órdenes</h1>
 
     <div class="row mb-3">
