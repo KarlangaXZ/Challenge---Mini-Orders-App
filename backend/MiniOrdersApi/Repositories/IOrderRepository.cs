@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using OrdersApi.Models;
+using MiniOrdersApi.Models;
 
 
-namespace OrdersApi.Repositories
+namespace MiniOrdersApi.Repositories
 {
     public interface IOrderRepository
     {
@@ -13,4 +13,5 @@ namespace OrdersApi.Repositories
         bool Update(Order order);
         bool Delete(Guid id);
     }
+
 }

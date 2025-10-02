@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace OrdersApi.Models
+namespace MiniOrdersApi.Models
 {
     public class Order
     {
@@ -14,7 +14,8 @@ namespace OrdersApi.Models
         [Required]
         public DateTime Fecha { get; set; }
         [Range(0.01, double.MaxValue, ErrorMessage = "El total debe ser mayor a 0")]
-        public decimal Total { get; set;}
-        
+        public decimal Total { get; set; }
+
     }
+
 }

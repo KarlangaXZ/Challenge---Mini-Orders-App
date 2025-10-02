@@ -1,51 +1,36 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OrdersApi.Models;
+using MiniOrdersApi.Models;  
 
-
-namespace OrdersApi.Repositories
+namespace MiniOrdersApi.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
         private readonly List<Order> _orders = new();
         private readonly object _lock = new();
 
-
         public OrderRepository()
         {
-            _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "Orinteck", Fecha = DateTime.UtcNow.AddDays(-3), Total = 300.00m });
-            _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "ACME S.A.", Fecha = DateTime.UtcNow.AddDays(-2), Total = 150.50m });
+            _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "Orinteck",    Fecha = DateTime.UtcNow.AddDays(-3), Total = 300.00m });
+            _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "ACME S.A.",   Fecha = DateTime.UtcNow.AddDays(-2), Total = 150.50m });
             _orders.Add(new Order { Id = Guid.NewGuid(), Cliente = "Globex Corp", Fecha = DateTime.UtcNow.AddDays(-1), Total = 299.99m });
         }
 
-
         public IEnumerable<Order> GetAll()
         {
-            lock (_lock)
-            {
-                return _orders.ToList(); 
-            }
+            lock (_lock) { return _orders.ToList(); }
         }
-
 
         public Order? Get(Guid id)
         {
-            lock (_lock)
-            {
-                return _orders.FirstOrDefault(o => o.Id == id);
-            }
+            lock (_lock) { return _orders.FirstOrDefault(o => o.Id == id); }
         }
-
 
         public void Add(Order order)
         {
-            lock (_lock)
-            {
-                _orders.Add(order);
-            }
+            lock (_lock) { _orders.Add(order); }
         }
-
 
         public bool Update(Order order)
         {
@@ -57,7 +42,6 @@ namespace OrdersApi.Repositories
                 return true;
             }
         }
-
 
         public bool Delete(Guid id)
         {

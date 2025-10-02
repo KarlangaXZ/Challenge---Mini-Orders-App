@@ -1,13 +1,11 @@
 using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using OrdersApi.Dtos;
-using OrdersApi.Models;
-using OrdersApi.Repositories;
+using MiniOrdersApi.Dtos;
+using MiniOrdersApi.Models;
+using MiniOrdersApi.Repositories;
 
-
-
-namespace OrdersApi.Controllers
+namespace MiniOrdersApi.Controllers
 {
     [ApiController]
     [Route("orders")]
@@ -19,7 +17,6 @@ namespace OrdersApi.Controllers
         {
             _repo = repo;
         }
-
 
         [HttpGet]
         public ActionResult Get([FromQuery] string? search, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
@@ -40,7 +37,6 @@ namespace OrdersApi.Controllers
             return Ok(new { total, page, pageSize, items = paged });
         }
 
-        
         [HttpGet("{id:guid}")]
         public ActionResult GetById(Guid id)
         {
@@ -49,7 +45,6 @@ namespace OrdersApi.Controllers
             return Ok(order);
         }
 
-     
         [HttpPost]
         public ActionResult Create([FromBody] OrderCreateDto dto)
         {
@@ -68,7 +63,6 @@ namespace OrdersApi.Controllers
             return CreatedAtAction(nameof(GetById), new { id = order.Id }, order);
         }
 
-        
         [HttpPut("{id:guid}")]
         public ActionResult Update(Guid id, [FromBody] OrderUpdateDto dto)
         {
@@ -87,7 +81,6 @@ namespace OrdersApi.Controllers
             return NoContent();
         }
 
-       
         [HttpDelete("{id:guid}")]
         public ActionResult Delete(Guid id)
         {

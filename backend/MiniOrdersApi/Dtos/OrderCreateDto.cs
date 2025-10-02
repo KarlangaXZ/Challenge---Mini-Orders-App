@@ -2,15 +2,13 @@ using System;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace OrdersApi.Dtos
+namespace MiniOrdersApi.Dtos
 {
     public class OrderCreateDto
     {
         [Required]
         [StringLength(200)]
         public string Cliente { get; set; } = string.Empty;
-
-
 
         public DateTime? Fecha { get; set; }
 

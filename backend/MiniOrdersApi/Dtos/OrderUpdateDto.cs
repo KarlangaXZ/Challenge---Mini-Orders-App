@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace OrdersApi.Dtos
+namespace MiniOrdersApi.Dtos
 {
     public class OrderUpdateDto
     {
