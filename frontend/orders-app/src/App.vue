@@ -1,11 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Orders from './components/Orders.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+ <div class="p-6">
+  <h1 class="text-2xl font-bold mb-4">🛒 Mini Orders App</h1>
+  <Orders />
+ </div>
 </template>
 
 <style scoped></style>
