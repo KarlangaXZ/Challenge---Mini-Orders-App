@@ -94,7 +94,7 @@ server: {
 ```
 ----
 
-🧪 Ejemplo de uso
+ Ejemplo de uso
 
 Arranca el backend en la carpeta backend/:
 
