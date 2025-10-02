@@ -1,8 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import OrdersList from '@/components/OrdersList.vue'
+import OrderForm from '@/components/OrderForm.vue'
+import OrderDetails from '@/components/OrderDetails.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+const routes: RouteRecordRaw[] = [
+  { path: '/', redirect: '/orders' },
+  { path: '/orders', component: OrdersList },
+  { path: '/orders/new', component: OrderForm },
+  { path: '/orders/:id', component: OrderDetails }
+]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes
 })
 
-export default router
+
+

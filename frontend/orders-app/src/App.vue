@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import Orders from './components/Orders.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
- <div class="container text-center mt-4">
-  <Orders />
- </div>
+  <div class="container mt-4">
+    
+    <router-view />
+  </div>
 </template>
 
 <style scoped></style>
