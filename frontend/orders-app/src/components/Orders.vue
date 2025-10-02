@@ -10,29 +10,41 @@ interface Order {
 }
 
 const orders = ref<Order[]>([])
+const error = ref('')
 
 onMounted(async () => {
-  const res = await api.get('/orders')
-  orders.value = res.data.items 
+  try {
+    const res = await api.get('/orders')
+    orders.value = res.data // Ajusta si tu backend devuelve { items: [...] }
+  } catch (err: any) {
+    error.value = err.message || 'Error al cargar las órdenes'
+  }
 })
 </script>
 
 <template>
-  <div class="p-6">
-    <h1 class="text-2xl font-bold mb-4">📋 Lista de Órdenes</h1>
-    <table class="min-w-full border border-gray-300 rounded-lg">
-      <thead class="bg-gray-200">
+  <div class="container mt-4">
+    <h1 class="mb-4">📋 Lista de Órdenes</h1>
+    <div v-if="error" class="alert alert-danger">{{ error }}</div>
+    <table class="table table-bordered table-striped" v-else>
+      <thead class="table-dark">
         <tr>
-          <th class="px-4 py-2">Cliente</th>
-          <th class="px-4 py-2">Fecha</th>
-          <th class="px-4 py-2">Total</th>
+          <th>Cliente</th>
+          <th>Fecha</th>
+          <th>Total</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="o in orders" :key="o.id" class="border-t">
-          <td class="px-4 py-2">{{ o.cliente }}</td>
-          <td class="px-4 py-2">{{ new Date(o.fecha).toLocaleDateString() }}</td>
-          <td class="px-4 py-2">${{ o.total.toFixed(2) }}</td>
+        <tr v-for="o in orders" :key="o.id">
+          <td>{{ o.cliente }}</td>
+          <td>{{ new Date(o.fecha).toLocaleDateString() }}</td>
+          <td>${{ o.total.toFixed(2) }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm">Ver</button>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Eliminar</button>
+          </td>
         </tr>
       </tbody>
     </table>

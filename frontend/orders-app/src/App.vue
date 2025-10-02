@@ -3,8 +3,7 @@ import Orders from './components/Orders.vue'
 </script>
 
 <template>
- <div class="p-6">
-  <h1 class="text-2xl font-bold mb-4">🛒 Mini Orders App</h1>
+ <div class="container text-center mt-4">
   <Orders />
  </div>
 </template>
